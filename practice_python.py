@@ -24,3 +24,13 @@ minimum = min(etch_rates)
 # 결과 출력
 print("최대 식각률:", maximum, "nm/min")
 print("최소 식각률:", minimum, "nm/min")
+
+# 식각률 측정값의 범위 계산
+etch_range = maximum - minimum
+
+# 각 측정값과 평균의 차이
+deviations = [rate - average for rate in etch_rates]
+
+# 결과 출력
+print("식각률 범위:", etch_range, "nm/min")
+print("평균과의 차이:", deviations)
